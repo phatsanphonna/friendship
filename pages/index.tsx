@@ -11,6 +11,7 @@ const Home: NextPage = () => {
         <title>เขียนเฟรนด์ชิพให้น้องซัน</title>
         <meta name="description" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="twitter:image" content="../images/thumb.png" />
       </Head>
 
       <div className={styles.root}>
