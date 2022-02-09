@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <title>เขียนเฟรนด์ชิพให้น้องซัน</title>
         <meta name="description" />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="twitter:image" content="../images/thumb.png" />
+        <meta property="twitter:image" content="https://cdn.discordapp.com/attachments/810939530898309181/941040094230511626/thumb.png" />
       </Head>
 
       <div className={styles.root}>
