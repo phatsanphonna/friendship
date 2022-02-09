@@ -1,0 +1,40 @@
+.card {
+    @apply w-5/6 md:w-96 h-96 md:h-[36rem];
+    @apply bg-white;
+    @apply p-8;
+
+    @apply flex flex-col items-center justify-center;
+}
+
+.main {
+    @apply w-full h-full mx-auto;
+}
+
+.header {
+    @apply w-full mb-3;
+    @apply text-left text-lg font-bold text-blue-dianne-400;
+}
+
+.main textarea {
+    @apply w-full p-2;
+    @apply text-sm;
+    
+    @apply outline-none;
+    resize: none;
+}
+
+.footer {
+    @apply w-full mt-3;
+    @apply italic;
+
+    @apply flex flex-row justify-between items-center;
+}
+
+.footer button {
+    @apply hover:underline font-semibold text-blue-dianne;
+}
+
+.footer input {
+    @apply w-3/6 p-1 outline-none;
+    @apply text-right italic text-blue-dianne-400;
+}
