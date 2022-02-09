@@ -10,12 +10,11 @@ const Card: React.FC = () => {
   const handleSubmit = async () => {
     if (!name || !message) return
 
-    const { data } = await postContent({ message, name })
+    try {
+      await postContent({ message, name })
 
-    if (data.success) {
-      alert(data.message)
-    } else {
-      alert('เกิดปัญหาทางเซิฟเวอร์ โปรดรอน้องซันแก้ภายในเร็ว ๆ นี้')
+    } catch (err) {
+      console.log(err)
     }
   }
 
