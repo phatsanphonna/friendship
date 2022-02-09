@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from '../styles/Card.module.css'
 
 import { postContent } from '../utils/postContent';
+import { pushWebhook } from '../utils/webhook';
 
 const Card: React.FC = () => {
   const [name, setName] = useState('')
@@ -12,7 +13,7 @@ const Card: React.FC = () => {
 
     try {
       await postContent({ message, name })
-
+      await pushWebhook({ message, name })
     } catch (err) {
       console.log(err)
     }
