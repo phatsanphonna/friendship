@@ -23,7 +23,7 @@ const Home: NextPage = () => {
           <Card />
 
           <footer className={styles.footer}>
-            <a href="">GitHub</a>
+            <a href="https://github.com/ssuniie/friendship" rel="noreferrer" target="_blank">GitHub</a>
           </footer>
         </main>
       </div>
