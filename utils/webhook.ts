@@ -6,7 +6,7 @@ type Post = {
 }
 
 export const pushWebhook = async (data: Post) => {
-    return await axios.post('https://discord.com/api/webhooks/941018696846037022/2jBuU6Ry8PoEdRIkVHjxrS7K1ur2z5DlH_k5SnNwjy-PtHFD9zaDZgtf4WBj460c7viT', {
+    return await axios.post(process.env.DISCORD_WEBHOOK_URL as string, {
         content: `**name**: ${data.name}\n**message**: ${data.message}
         `
     })
