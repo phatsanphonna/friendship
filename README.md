@@ -1,8 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-
-First, run the development server:
+First, set environment variable in `.env.local`
+- DB_CONNECTION_URI: MongoDB connection string
+- NEXT_PUBLIC_DISCORD_WEBHOOK_URL: for sending webhooks to Discord chat (optional, disable by comment `sendWebhook()` out in `pages/index.ts`) 
+ 
+Then, run the development server:
 
 ```bash
 npm run dev
