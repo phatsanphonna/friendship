@@ -13,6 +13,10 @@ const Card: React.FC = () => {
 
     try {
       await postContent({ message, name })
+      
+      setName('')
+      setMessage('')
+      
       await pushWebhook({ message, name })
     } catch (err) {
       console.log(err)
