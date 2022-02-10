@@ -7,16 +7,20 @@ import { pushWebhook } from '../utils/webhook';
 const Card: React.FC = () => {
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
+  const [requiredField, setRequiredField] = useState(false)
 
   const handleSubmit = async () => {
-    if (!name || !message) return
+    if (!name || !message) {
+      alert('อย่าลืมเขียนเนื้อหาให้ครบด้วย')
+      return
+    }
 
     try {
-      await postContent({ message, name })
-      
+      postContent({ message, name })
+
       setName('')
       setMessage('')
-      
+
       await pushWebhook({ message, name })
     } catch (err) {
       console.log(err)
