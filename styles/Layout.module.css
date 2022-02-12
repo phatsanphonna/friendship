@@ -1,0 +1,12 @@
+.root {
+    padding: 2rem;
+
+    @apply h-screen;
+    @apply bg-blue-dianne;
+}
+
+.wrapper {
+    @apply container h-full mx-auto;
+    @apply flex flex-col justify-center items-center;
+    @apply gap-5;
+}

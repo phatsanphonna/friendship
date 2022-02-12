@@ -7,7 +7,7 @@ import { pushWebhook } from '../utils/webhook';
 const Card: React.FC = () => {
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
-  const [requiredField, setRequiredField] = useState(false)
+  const [isSent, setIsSent] = useState(false)
 
   const handleSubmit = async () => {
     if (!name || !message) {
@@ -15,6 +15,11 @@ const Card: React.FC = () => {
       return
     }
 
+    if (isSent) {
+      alert('ระบบได้ส่งข้อความให้แล้ว')
+      return
+    }
+    
     try {
       postContent({ message, name })
 
@@ -38,6 +43,7 @@ const Card: React.FC = () => {
           rows={10}
           placeholder='เขียนข้อความที่นี่'
           onChange={e => setMessage(e.target.value)}
+          value={message}
         />
       </main>
 
@@ -46,6 +52,7 @@ const Card: React.FC = () => {
         <input type="text"
           placeholder='แปะชื่อ'
           onChange={e => setName(e.target.value)}
+          value={name}
         />
       </footer>
     </div>
